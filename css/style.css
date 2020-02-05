@@ -1,38 +1,51 @@
-html{
+html {
   background-color: black;
   color: white;
-  font-family: 'Orbitron', Meiryo, sans-serif;
+  font-family: "Orbitron", Meiryo, sans-serif;
   text-align: center;
   margin: 0;
 }
-.header{
-  background-image: url(../img/L@BEL.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 550px;
-  filter: contrast(110%);
+body {
+  margin: 0;
+}
+.header {
+  height: 750px;
   letter-spacing: 0.3em;
   position: relative;
 }
-.header-title{
+.header::before {
+  content: "";
+  background-image: url(../img/L@BEL.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: contrast(120%) blur(6px);
+}
+
+.header-title {
   font-size: 4rem;
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  text-shadow: 0px 0px 7px	#1021de;
+  text-shadow: 0px 0px 5px #1021de;
   width: 100%;
 }
-.header-catch{
+.header-catch {
   font-size: 1.5rem;
-  font-weight: 400px;
   position: absolute;
   top: 58%;
-  transform: translateY(-50%);
-  text-shadow: 0px 0px 7px	#1021de;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 7px #1021de;
   width: 100%;
 }
-@media (max-width:465px){
-  .header-catch{
+@media (max-width: 465px) {
+  .header {
+    height: 550px;
+  }
+  .header-catch {
     max-width: 220px;
     top: 60%;
     width: 100%;
@@ -41,36 +54,43 @@ html{
 .main {
   max-width: 600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 7em auto;
 }
-@media (max-width:700px){
-  .activity-sentence{
+@media (max-width: 700px) {
+  .section-sentence {
     margin: 0 20px;
   }
 }
-.activity-head{
+.section-head {
   font-size: 2rem;
-  text-shadow: 0px 0px 10px	#1021de;
+  text-shadow: 0px 0px 10px #1021de;
 }
-.activity-sentence{
+.section-sentence {
   font-size: 1rem;
 }
-.schedule-head{
-  font-size: 2rem;
-  text-shadow: 0px 0px 10px	#1021de;
-}
-.schedule-sentence{
-  font-size: 1rem;
-}
-.location-head{
-  font-size: 2rem;
-  text-shadow: 0px 0px 10px	#1021de;
-}
-.location-sentence{
-  font-size: 1rem;
-}
-.map{
-  max-width: 600px; 
+.map {
+  max-width: 600px;
   width: 100%;
   height: 400px;
+  margin: 2.5em 0;
+}
+.contact-list {
+  font-size: 2.5em;
+  list-style: none;
+  margin: 2.5em 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-list--link {
+  color: white;
+  filter: drop-shadow(0 0 0.5em #1021de);
+  text-decoration: none;
+  transition: 0.2s color;
+}
+
+.contact-list--link:hover {
+  opacity: 75%;
+  color: #1021de;
 }
