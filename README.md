@@ -1,3 +1,3 @@
 # LaBEL
-WEB site of LaBEL
+WEB site of LaBEL  
 https://label.netlify.app/
